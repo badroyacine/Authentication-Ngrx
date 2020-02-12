@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Authentication-Ngrx"
+    }
+  },
+  "defaultProject": "Authentication-Ngrx",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
