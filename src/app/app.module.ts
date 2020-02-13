@@ -12,6 +12,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { AppEffects } from './app.effects';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
+import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { MaterialModule } from './shared/material.module';
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
+    HttpClientModule,
     AuthModule.forRoot(),
     StoreModule.forRoot(reducers, {
       metaReducers,
