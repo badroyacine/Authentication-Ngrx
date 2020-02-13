@@ -28,13 +28,11 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.fb.group({
       username: ['', [Validators.required]],
       password: ['', [Validators.required, Validators.minLength(8)]],
-      rememberMe: [false, []]
     });
   }
 
   get username(){ return this.loginForm.controls.username }
   get password(){ return this.loginForm.controls.password }
-  get rememberMe(){ return this.loginForm.controls.rememberMe }
 
   onLogin(){
     if(this.loginForm.invalid){
@@ -46,7 +44,6 @@ export class LoginComponent implements OnInit {
     const credentials = {
       email: this.username.value,
       password: this.password.value,
-      rememberMe: this.rememberMe.value
     }
 
     this.authService.login(credentials).pipe(

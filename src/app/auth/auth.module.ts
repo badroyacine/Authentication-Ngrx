@@ -7,11 +7,15 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { StoreModule } from '@ngrx/store';
 import * as fromAuth from './reducers';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '../shared/material.module';
 
 @NgModule({
   imports: [
     CommonModule,
     AuthRoutingModule,
+    ReactiveFormsModule,
+    MaterialModule,
     StoreModule.forFeature(fromAuth.authFeatureKey, fromAuth.reducer),
   ],
   declarations: [
