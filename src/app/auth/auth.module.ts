@@ -12,13 +12,14 @@ import * as fromAuth from './reducers';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    StoreModule.forFeature(fromAuth.authFeatureKey, fromAuth.reducers, { metaReducers: fromAuth.metaReducers }),
+    StoreModule.forFeature(fromAuth.authFeatureKey, fromAuth.reducer),
   ],
   declarations: [
-  AuthComponent,
-  LoginComponent,
-  RegisterComponent,
-  HomeComponent],
+    AuthComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent
+  ],
   providers: [],
   entryComponents: [],
   exports: [],
