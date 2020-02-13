@@ -15,10 +15,11 @@ import * as fromAuth from './reducers';
     StoreModule.forFeature(fromAuth.authFeatureKey, fromAuth.reducer),
   ],
   declarations: [
-  AuthComponent,
-  LoginComponent,
-  RegisterComponent,
-  HomeComponent],
+    AuthComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent
+  ],
   providers: [],
   entryComponents: [],
   exports: [],
