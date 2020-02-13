@@ -7,11 +7,11 @@ import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './services/auth-guard.service';
 
 const routes: Routes = [
-  // { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'login', component:  LoginComponent, canActivate: [VisitorGuard]},
   { path: 'register', component:  RegisterComponent, canActivate: [VisitorGuard]},
   // { path: 'forgot-password', component:  ForgotPasswordComponent, canActivate: [VisitorGuard] },
-  { path: '', component:  HomeComponent, canActivate: [AuthGuard] }
+  { path: 'home', component:  HomeComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
